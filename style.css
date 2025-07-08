@@ -1,10 +1,52 @@
+body {
+    margin: 0px;
+}
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(121, 121, 226);
+    background-image: linear-gradient(90deg, white 12%, #bbbbf1 60%, #620ae5 100%);
+    border-bottom: 2px solid black;
 }
 .header img {
-    width: 80px;
-    height: 80px;
+    padding-left: 10px;
+    width: 100px;
+    height: 100px;
+}
+.header p {
+    padding-right: 280px;
+    font-size: 30px;
+}
+.whole_conent {
+    gap: 2px;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    background-image: linear-gradient(90deg, white 12%, #bbbbf1 60%, #620ae5 100%);
+}
+.main_content {
+    width: calc(100% - 308px);
+    padding: 16px;
+   
+}
+.side_content {
+    width: 300px;
+    flex-grow: 1;
+    padding: 16px;
+    
+}
+.main_dishes {
+    padding: 32px;
+    font-size: 48px;
+    height: 1500px;
+    width: 80%;
+    background-color: rgb(135, 192, 241);
+}
+.basket {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(141, 141, 232);
+    position: sticky;
+    top: 0;
 }
