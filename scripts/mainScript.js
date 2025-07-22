@@ -111,13 +111,13 @@ function displayNone(id) {
 function showOverlay() {
     document.getElementById("overlay").classList.add("display-flex");
     document.getElementById("overlay").classList.remove("display-none");
-    disableScroll();
+    
 }
 
 function hideOverlay() {
     document.getElementById("overlay").classList.add("display-none");
     document.getElementById("overlay").classList.remove("display-flex");
-    enableScroll();
+  
 }
 
 function order() {
@@ -128,16 +128,3 @@ function order() {
     countProducts(0);
 }
 
-function disableScroll() {
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${window.scrollY}px`;
-    document.body.style.width = '100%';
-}
-
-function enableScroll() {
-    const scrollY = document.body.style.top;
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.width = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
-}
