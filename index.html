@@ -7,91 +7,110 @@
     <link rel="icon" type="image/x-icon" href="img/favicon/1000067167.png">
     <link rel="stylesheet" href="styles/style.css">
 
-    <script src="scripts/food.js"></script>
-    <script src="scripts/mainScript.js"></script>
-    <script src="scripts/template.js"></script>
-
-
+    <script src="./scripts/mainScript.js"></script>
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/temp.js"></script>
+  
 </head>
+
 <body onload="init()">
     <header>
         <div>
-            <img src="img/logo/koch.png">
+            <img src="img/favicon/1000067167.png">
+            <h1>Zum Gamsbock</h1>
         </div>
-        <div class="head-basket">
-            <img onclick="displayNone('basket')" id="head-basket" src="img/logo/warenkorb.png">
+
+        <div class="header-burger">
+            <img onclick="displayNone('basket')" id="header_burger" src="img/logo/warenkorb.png">
         </div>
-        <div class="basket-shop">
-            <p id="countFood">0</p>
-            <img onclick="displayNone('basket')" id="head-basket" src="img/logo/warenkorb.png">
+
+        <div class="header-shopping">
+            <p id="countProducts">0x</p>
+            <img onclick="displayNone('basket')" id="header_burger" src="img/logo/warenkorb.png">
         </div>
     </header>
-    <main class="main-content">
+
+    <main class="content-wrapper">
         <section class="content">
             <div>
-              <img src="" alt="Restaurant-logo">
+                <img src="img/logo/bavarian-flag.jpg">
             </div>
-            <div class="content-header">
+
+            <div class="content-headline">
                 <div>
-                    <h1>Zum Gamsbock</h1>
+                    <div class="content-headline-rating">
+                        <img src="img/logo/star.png">
+                        <p>Bewertung (4.8 von 5 Sternen)</p>
+                    </div>
                 </div>
-                <div class="rating">
-                    <img src="" alt="star">
-                    <p>Rating (4.8 von 5 Sternen)</p>
-                </div>
-                <div class="head-info">
-                    Gratis Lieferung über 10€
+                <div class="content-headline-info">
+                    <p>Gratis Lieferung über 10€</p>
+                    
                 </div>
             </div>
-            <div class="product-menu">
+
+            <div class="content-section">
                 <a href="#hauptgerichte">Hauptgerichte</a>
                 <a href="#desserts">Desserts</a>
                 <a href="#getränke">Getränke</a>
             </div>
-            <div class="menu">
-                <div class="mains">
-                    <img id="allMains" class="food-img" src="img/Hauptgerichte/schnitzel.jpg">
+
+            <div class="content-menu">
+                <div>
+                    <img class="food-img" src="img/Hauptgerichte/schnitzel.jpg">
                     <h2>Hauptgerichte</h2>
-                    <div id="main-dishes" class="card-style"></div>
+                    <div id="main-dishes" class="element-content">
+                    </div>
                 </div>
-            </div>
-                <div class="desserts">
-                    <img id="allDesserts" class="food-img" src="img/Desserts/dessert.jpg">
-                    <h2>Desserts</h2>
-                    <div id="dessert-dishes" class="card-style"></div>
+
+                <div>
+                    <img class="food-img" src="img/Desserts/dessert.jpg">
+                    <h3>Desserts</h3>
+                    <div id="sweet-dishes" class="element-content">
+                    </div>
                 </div>
-                <div class="drinks">
-                    <img id="allDrinks" class="food-img" src="img/Getränke/getränke.jpg">
-                    <h2>Getränke</h2>
-                    <div id="drink-dishes" class="card-style"></div>
+
+                <div>
+                    <img class="food-img" src="img/Getränke/getränke.jpg">
+                    <h3>Getränke</h3>
+                    <div id="liquid-dishes" class="element-content">
+                    </div>
                 </div>
             </div>
         </section>
-        <div id="overlay" class="overlay displayNone"> 
-            <div class="order">
-                <div class="order-text">Deine Bestellung wird geliefert!</div>
 
-                <div class="close-order">
-                    <button onclick="closeOverlay()">Zurück</button>
+        <div id="overlay" class="overlay display-none">
+            <div class="finishedOrder">
+                <div class="finishedOrderHeadline">Deine Bestellung ist auf dem Weg!</div>
+                
+                <div class="finishedOrderBottom">
+                    <button onclick="hideOverlay()">Zurück</button>
                 </div>
+
             </div>
         </div>
+
         <section class="basket" id="basket">
             <div class="basket-headline">
                 <h2>Warenkorb</h2>
             </div>
-            <div class="basket-div"></div>
-            <div id="checkout" class="checkout">
-                 <p>Zwischensumme: 0.00€</p>
-                 <p>Lieferkosten: 5.00€</p>
-                 <p>Gesamtkosten: 5.00€</p>
+            
+            <div id="basket-items" class="basket-items">
             </div>
-             <div class="basket-section">
+            
+            <div id="basket-checkout" class="basket-checkout">
+                <p>Zwischensumme: 0.00€</p>
+                <p>Lieferkosten: 5.00€</p>
+                <p><b>Gesamt: 5.00€</b></p>
+            </div>
+            <div class="basket-section">
                 <button onclick="order(); showOverlay(); displayNone('basket')">Bestellen</button>
                 <button onclick="displayNone('basket')" class="basketBackButton">Zurück</button>
             </div>
         </section>
-    </main> 
+    </main>
+
+
         <footer class="footer">kontakt etc.</footer>
 </body>
 </html>
