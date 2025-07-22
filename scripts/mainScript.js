@@ -123,8 +123,7 @@ function hideOverlay() {
 function order() {
     basketArray = [];
     fullprice = 0;
-    amount = 0;s
-    renderBasket();
+    amount = 0;
     countProducts(0);
 }
 

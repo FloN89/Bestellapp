@@ -84,8 +84,9 @@
 }
 
 .item {
+    height: 100px;
     cursor: pointer;
-    border: 2px solid rgb(224, 224, 222);
+    border: 2px solid rgb(10, 9, 10);
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 10px;
@@ -131,12 +132,10 @@
 
 .basket {
     width: 300px;
-    height: 700px;
-    background-color: rgb(255, 255, 255);
+    height: auto;
+    background-color: rgb(165, 161, 169);
     z-index: 1;
-    filter: drop-shadow(10px 10px 10px black);
-    overflow-x: hidden;
-    overflow-y: auto;
+    margin-left: 5px;
 }
 
 .basket-section {
@@ -144,6 +143,7 @@
     justify-content: center;
     margin-right: 15px;
     padding: 10px;
+    
 }
 
 .basket-section button {
@@ -163,15 +163,7 @@
 .basket-headline {
     display: flex;
     justify-content: center;
-
     padding: 10px;
-}
-
-.line-div {
-    background-color: rgb(224, 224, 222);
-    height: 2px;
-    width: 100%;
-    margin: 10px 0px;
 }
 
 .display-none {
@@ -197,7 +189,7 @@
 
 .finishedOrder {
     background-color: white;
-    height: 400px;
+    height: 200px;
     width: 700px;
     border-radius: 10px;
 }
