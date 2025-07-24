@@ -33,13 +33,13 @@ function addToBasket(item) {
         item.quantity = 1;
         basketArray.push(item);
     }
-    countProducts(1);
+    addDishes(1);
     updateFullPrice();
     renderBasket();
 }
 
-function countProducts(changeAmount) {
-    let product = document.getElementById("countProducts");
+function addDishes(changeAmount) {
+    let product = document.getElementById("addDishes");
     amount += changeAmount;
     if (amount < 0) {
         amount = 0;
@@ -56,7 +56,7 @@ function updateFullPrice() {
 
 function increaseQuantity(index) {
     basketArray[index].quantity++;
-    countProducts(1);
+    addDishes(1);
     updateFullPrice();
     renderBasket();
 }
@@ -64,9 +64,9 @@ function increaseQuantity(index) {
 function decreaseQuantity(index) {
     if (basketArray[index].quantity > 1) {
         basketArray[index].quantity--;
-        countProducts(-1);
+        addDishes(-1);
     } else {
-        countProducts(-basketArray[index].quantity);
+        addDishes(-basketArray[index].quantity);
         basketArray.splice(index, 1);
     }
     updateFullPrice();
@@ -77,17 +77,17 @@ function decreaseQuantity(index) {
 function deleteFromBasket(index) {
     const quantityToRemove = basketArray[index].quantity;
     basketArray.splice(index, 1);
-    countProducts(-quantityToRemove);
+    addDishes(-quantityToRemove);
     updateFullPrice();
     renderBasket();
 }
 
 function renderBasket() {
-    let basket = document.getElementById('basket-items');
+    let basketId = document.getElementById('basket-items');
     let basketCheckout = document.getElementById('basket-checkout');
-    basket.innerHTML = "";
+    basketId.innerHTML = "";
     for (let i = 0; i < basketArray.length; i++) {
-        basket.innerHTML += basketTemp(basketArray[i], i);
+        basketId.innerHTML += basketTemp(basketArray[i], i);
     }
     basketCheckout.innerHTML = costsTemp(fullprice);
 }
@@ -96,11 +96,6 @@ function renderBasket() {
 function costsTemp(total) {
     let delivery = 5;
     let finalPrice = total + delivery;
-
-    if (total >= 10) {
-        delivery = 0;
-        finalPrice = total;
-    }
     return renderCostTemplate(total, delivery, finalPrice);
 }
 
@@ -124,6 +119,6 @@ function order() {
     basketArray = [];
     fullprice = 0;
     amount = 0;
-    countProducts(0);
+    addDishes(0);
 }
 

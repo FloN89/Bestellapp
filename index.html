@@ -14,19 +14,19 @@
 </head>
 
 <body onload="init()">
-    <header>
-        <div>
+    <header class="header-content">
+        <div class="head-logo">
             <img src="img/favicon/1000067167.png">
             <h1>Zum Gamsbock</h1>
         </div>
 
-        <div class="header-burger">
-            <img onclick="displayNone('basket')" id="header_burger" src="img/logo/warenkorb.png">
+        <div class="header-basket">
+            <img onclick="displayNone('basketId')" id="header_burger" src="img/logo/warenkorb.png">
         </div>
 
         <div class="header-shopping">
-            <p id="countProducts">0x</p>
-            <img onclick="displayNone('basket')" id="header_burger" src="img/logo/warenkorb.png">
+            <p id="addDishes">0x</p>
+            <img onclick="displayNone('basketId')" id="header_burger" src="img/logo/warenkorb.png">
         </div>
     </header>
 
@@ -42,36 +42,33 @@
                         <img src="img/logo/star.png">
                         <p>Bewertung (4.8 von 5 Sternen)</p>
                     </div>
-                </div>
-                <div class="content-headline-info">
-                    <p>Gratis Lieferung über 10€</p>  
-                </div>
+                </div> 
             </div>
 
             <div class="content-section">
-                <a href="#hauptgerichte">Hauptgerichte</a>
+                <a href="#mains">Hauptgerichte</a>
                 <a href="#desserts">Desserts</a>
-                <a href="#getränke">Getränke</a>
+                <a href="#drinks">Getränke</a>
             </div>
 
             <div class="content-menu">
                 <div>
                     <img class="food-img" src="img/Hauptgerichte/schnitzel.jpg">
-                    <h2>Hauptgerichte</h2>
+                    <h2 id="mains">Hauptgerichte</h2>
                     <div id="main-dishes" class="element-content">
                     </div>
                 </div>
 
                 <div>
                     <img class="food-img" src="img/Desserts/dessert.jpg">
-                    <h3>Desserts</h3>
+                    <h2 id="desserts">Desserts</h2>
                     <div id="sweet-dishes" class="element-content">
                     </div>
                 </div>
 
                 <div>
                     <img class="food-img" src="img/Getränke/getränke.jpg">
-                    <h3>Getränke</h3>
+                    <h2 id="drinks">Getränke</h2>
                     <div id="liquid-dishes" class="element-content">
                     </div>
                 </div>
@@ -89,7 +86,7 @@
             </div>
         </div>
 
-        <section class="basket" id="basket">
+        <section class="basket" id="basketId">
             <div class="basket-headline">
                 <h2>Warenkorb</h2>
             </div>
@@ -103,13 +100,13 @@
                 <p><b>Gesamt: 5.00€</b></p>
             </div>
             <div class="basket-section">
-                <button onclick="order(); showOverlay(); displayNone('basket')">Bestellen</button>
-                <button onclick="displayNone('basket')" class="basketBackButton">Zurück</button>
+                <button onclick="order(); showOverlay(); displayNone('basketId')">Bestellen</button>
+                <button onclick="displayNone('basketId')" class="basketBackButton">Zurück</button>
             </div>
         </section>
     </main>
 
 
-        <footer class="footer">kontakt etc.</footer>
+        <footer class="footer">&copy; Florian Narr 2025</footer>
 </body>
 </html>
