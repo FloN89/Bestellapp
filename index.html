@@ -1,112 +1,95 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./styles/basket.css" />
-    <link rel="stylesheet" href="./styles/dish_overview.css" />
-    <link rel="stylesheet" href="./styles/button.css" />
-    <link rel="stylesheet" href="./styles/media-queries.css" />
-    
-    
-    <title>Bestellapp</title>
-  </head>
-  <body onload="init()">
-    <div class="header">
-      <a
-        href="https://patrick-fischer.developerakademie.net/Bestellapp/index.html"
-      >
-        <img
-          class="header_logo"
-          src="./Material/Logo/Logo.png"
-          alt="Bestellapp_Logo"
-        />
-      </a>
-      <button
-        class="burger-menu"
-        onclick="this.classList.toggle('active')">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestellApp</title>
+    <link rel="shortcut icon" href="img/logos/favicon.png" type="image/x-icon">
+   
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/template.css">
 
-    <div class="order_view">
-      <div id="dish_overview">
-        <div class="dish_overview_img"></div>
-
-        <div class="restaurant_info"><h2>Zum Gamsbock</h2></div>
-        <div class="restaurant_info2">
-          <p class="rating">Bewertung (4,8 von 5 Sternen)</p>
-          <div></div>
-          <p class="order_value">Bestellwert min. 20,00 €</p>
-        </div>
-
-        <div class="category">
-          <div class="category_formation">
-            <a href="#noodle" class="category_a">Hauptgerichte</a>
-            <a href="#pizza" class="category_a">Desserts</a>
-            <a href="#salad" class="category_a">Getränke</a>
-          </div>
-        </div>
-
-        <div class="item-category meal_noodle" id="noodle">
-          <p id="p-item-category">Hauptgerichte</p>
-        </div>
-        <div class="food_noodle food-div"></div>
-
-        <div class="item-category meal_pizza" id="pizza">
-          <p id="p-item-category">Desserts</p>
-        </div>
-        <div class="food_pizza food-div"></div>
-
-        <div class="item-category meal_salate" id="salad">
-          <p id="p-item-category">Getränke</p>
-        </div>
-        <div class="food_salat food-div"></div>
-      </div>
-
-      <div class="basket">
-        <h2 class="basket-header">Warenkorb</h2>
-        <div id="basketArticles"></div>
-        <p class="total-price" id="total-price"></p>
-        <button class="to-order">Bestellen</button>
-      </div>
-    </div>
-
-    <div class="basket-bar">
-      <h2>Warenkorb</h2>
-    </div>
-
-    <div id="custom-dialog" class="dialog hidden">
-      <div class="dialog-content">
-        <span class="close-button">×</span>
-
-        <div id="dialog-basket" class="basket-dialog-container">
-          <h2>Warenkorb</h2>
-          <div id="basketArticlesDialog"></div>
-          <p class="total-price" id="total-price-dialog"></p>
-          <button class="to-order-dialog">Bestellen</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      <p>&copy Florian Narr 2025</p>
-    </div>
-
-    <div id="thank-you-overlay" class="overlay hidden">
-      <div class="overlay-content">
-        <h2>Danke für deine Bestellung!</h2>
-      </div>
-    </div>
-
+    <script src="./script/menu.js"></script>
     <script src="./script.js"></script>
-    <script src="script/dishes.js"></script>
-    <script src="script/template.js"></script>
-    
-  </body>
-</html>
+    <script src="./script/template.js"></script>
 
-       
+</head>
+<body onload="init()">
+    
+
+
+    <div onclick="toggleOverlayOrder()" id="overlayOrder" class="overlay-order d-none">
+        <div onclick="noBubbling(event)" class="overlay-content-order ">
+            <span class="order-text">Vielen Dank für Deine Bestellung</span>
+        </div>
+    </div>
+    
+    <section class="header">
+        <div class="header-content widescreen">
+            <img class="header-Logo" src="img/logos/favicon.png">
+            <h1>Zum Gamsbock</h1>
+        </div>
+    </section>    
+
+    <section class="content-section widescreen">
+        <div class="content-top">
+            <div class="header-images">
+                <img class="round-logo" src="img/logos/favicon.png">
+                <img class="header-image" src="img/logos/beer-garden-4466095_1280.jpg">
+            </div>
+            <div class="headline-rating">
+                 <span class="rating">Bewertung (4,8 von 5 Sternen)</span>
+            </div>
+            <div class="menu-choice">
+                <a class="internal-link" href="#mains">Hauptgerichte</a>                
+                <a class="internal-link" href="#desserts">Desserts</a>  
+                 <a class="internal-link" href="#drinks">Getränke</a>              
+            </div>
+
+            <div class="content-dishes">
+                <img id="mains" class="content-images" src="img/dishes/roast-crust-2278382_1280.jpg" >
+                <span class="dishes-headline">Hauptgerichte</span>
+                <div id="dishMainFood" ></div>             
+            </div>
+
+            <div class="content-dishes">
+                <img id="desserts" class="content-images" src="img/dishes/apple-pie-5479993_1280.jpg">
+                <span class="dishes-headline">Desserts</span>
+                <div id="dishDessertFood"></div>                
+            </div>
+
+            <!-- <div class="content-dishes">
+                <img id="drinks" class="content-images" src="img/dishes/green-924165_1280.jpg">
+                <span class="dishes-headline">Getränke</span>
+                <div id="dishDrinks"></div>                
+            </div> -->
+
+
+            <div id="basketMobile"></div>
+        </div>
+
+        
+        <div id="stickyBasket" class="basket hide-basket">
+            <div class="basket-sticky">
+                <div class="basket-header">
+                    <span class="basket-header-text">Warenkorb</span>
+                    <img onclick="hideBasket()" class="close-icon" src="img/buttons/delete.png">
+                </div>
+                <div id="basketContentEmpty"></div>
+                <div class="basket-full" id="basketFull"></div>
+                <div class="sum-content" id="sumMobile"></div> 
+                <div id="orderSection" class="order-section"></div> 
+                
+                
+            </div>
+        </div>        
+    </section >    
+
+    <section class="footer">
+        <div class="footer-content">
+            <span>&copy Florian Narr 2025</span>
+        </div>
+    </section> 
+
+</body>
+</html>

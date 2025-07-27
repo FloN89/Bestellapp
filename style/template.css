@@ -1,0 +1,41 @@
+
+
+html {
+    scroll-behavior: smooth;
+    
+  }
+
+body {
+    margin: 0;  
+     
+}
+
+.widescreen {
+    max-width: 1920px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color:rgba(152, 82, 238, 0.7);
+}
+
+.header {
+    background-color:  rgb(243, 243, 245);;
+    width: 100%;
+}
+
+h1 {
+    font-size: 35px;
+    margin: 0 0 10px 0;
+}
+
+.footer {
+    background-color: rgba(227, 216, 216, 0.7);
+    width: 100%;
+}
+
