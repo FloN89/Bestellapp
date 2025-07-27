@@ -176,17 +176,6 @@ function noBubbling(event) {
     event.stopPropagation();
 }
 
-function checkFunction() {
-    let checkBox = document.getElementById("checkbox1");    
-    if (checkBox.checked == false){
-        deliveryCost = 5;        
-    } 
-    else {
-        deliveryCost = 0;        
-    }
-    basketSum(deliveryCost);  
-}
-
 function completeEmptyTrash() {
     for (let indexBasket = 0; indexBasket < bascetCard.length; indexBasket++) {    
         bascetCard.length = 0;
@@ -196,14 +185,4 @@ function completeEmptyTrash() {
     }    
 }
 
-function checkFunctionMobile() {
-    let checkBox = document.getElementById("checkbox2");    
-    if (checkBox.checked == false){
-        deliveryCost = 5;        
-    } 
-    else {
-        deliveryCost = 0;        
-    }
-    basketSum(deliveryCost);  
-}
 

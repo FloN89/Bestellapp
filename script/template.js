@@ -73,11 +73,7 @@ function showSumContent(total) {
 }
 
 function showOrderClear() {
-    return      `   
-                    <div>
-                        <input class="checkbox-delivery" type= "checkbox" id= "checkbox1" onclick= "checkFunction()">
-                        <label class="checkbox-delivery-label" for="checkboxDelivery"> Selbstabholung</label> 
-                    </div>
+    return      `  
                     <div class="order-empty">
                         <button onclick="toggleOverlayOrder()" class="order-button">Jetzt bestellen</button>
                         <button onclick="completeEmptyTrash()" class="empty-basket-button">Warenkorb leeren</button>
