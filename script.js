@@ -1,4 +1,4 @@
-let deliveryCost = 5; 
+let deliveryCost = 7; 
 
 function init() {
     renderMain();
