@@ -15,7 +15,7 @@ let mainDish = [
         "price" : 14.99
     },
     {
-        "name" : "Scheinsbraten",
+        "name" : "Schweinsbraten",
         "description" : "",
         "price" : 19.99
     },
