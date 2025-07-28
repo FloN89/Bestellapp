@@ -39,7 +39,7 @@ let desserts = [
         "price" : 6.99
     },
     {
-        "name" : "Crepe mit Schokolade",
+        "name" : "Crepes mit Schokolade",
         "description" : "",
         "price" : 5.99
     },
@@ -47,24 +47,24 @@ let desserts = [
 ]
 // let drinks = [
 //     {
-//         "name" : "",
+//         "name" : "Sprudelwasser 0,5L",
 //         "description" : "",
-//         "price" : 
+//         "price" : 1.99
 //     },
 //     {
-//         "name" : "",
+//         "name" : "Helles 0,5L",
 //         "description" : "",
-//         "price" : 6.99
+//         "price" : 3.99
 //     },
 //     {
-//         "name" : "",
+//         "name" : "Weißbier 0,5L",
 //         "description" : "",
-//         "price" : 6.99
+//         "price" : 3.99
 //     },
 //     {
-//         "name" : "",
+//         "name" : "Almdudler 0,5L",
 //         "description" : "",
-//         "price" : 
+//         "price" : 2.99
 //     },
     
 // ];
