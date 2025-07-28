@@ -5,7 +5,7 @@
 
     .basket {
        position: fixed;
-       background-color: aliceblue;
+       background-color: rgb(232, 236, 239);
        inset: 0 0 0 0;
        width: 100%;        
     }

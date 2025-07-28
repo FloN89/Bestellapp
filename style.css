@@ -2,12 +2,15 @@
     position: fixed;
     height: 300px;
     width:100%;
-    background-color: rgba(30, 16, 226, 0.5);
+    background: linear-gradient(90deg,rgb(242, 242, 244) 0%, rgba(240, 240, 250, 1) 19%, rgba(52, 52, 59, 1) 100%, rgba(148, 154, 156, 1) 57%);
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center; 
     font-size: 30px;
+    border-radius: 10px;
+    margin-top: 300px;
+    
 }
 
 .d-none {
@@ -15,7 +18,7 @@
 }
 
 .header-content {
-    background-color: rgb(203, 195, 195);
+    background: linear-gradient(90deg,rgb(242, 242, 244) 0%, rgba(240, 240, 250, 1) 19%, rgba(52, 52, 59, 1) 100%, rgba(148, 154, 156, 1) 57%);
     height: 90px;
     display: flex;
     justify-content:space-between;
@@ -74,7 +77,7 @@
     align-items: center;
 }
 .rating {
-    color: rgb(81, 12, 183);
+    color: rgb(177, 140, 6);
     font-size: 20px;
     padding-left: 30px;   
     padding-top: 30px; 
@@ -125,7 +128,7 @@
 }
 
 .dish-choice:hover {
-    background-color:rgba(152, 82, 238, 0.7); 
+    background: linear-gradient(90deg,rgb(242, 242, 244) 0%, rgba(240, 240, 250, 1) 19%, rgba(52, 52, 59, 1) 100%, rgba(148, 154, 156, 1) 57%);
 }
 
 .plus{
@@ -157,7 +160,7 @@
     font-size: 20px;
     font-weight: bold;
     margin: 0px 0px 20px 10px;
-    color:  rgb(81, 12, 183);;
+    color:  rgb(37, 37, 38);;
 }
 
 .basket {
@@ -211,7 +214,7 @@
     position: fixed;
     top: 100px;
     right: 22px;
-    background-color: rgba(80, 70, 219, 0.7);
+    background-color: rgba(187, 187, 190, 0.7);
     border-radius: 8px;
     visibility: hidden;
     cursor: pointer;
@@ -220,7 +223,7 @@
 
 .number-mobile-basket {
     position: absolute;
-    background-color: rgb(44, 5, 136);;
+    background-color: rgb(62, 61, 65);;
     color: aliceblue;
     font-size: 22px;
     padding:  8px 15px 8px 15px;
@@ -307,51 +310,51 @@
 .order-button {
     padding: 10px 10px 10px 10px;
     margin: 10px 10px 10px 10px;
-    border-radius: 15px;
+    border-radius: 8px;
     border-width: 0px;
-    background-color:  rgb(81, 12, 183);;
-    color: aliceblue;
+    background-color: rgb(169, 168, 168)  ;
+    color: black;
     cursor: pointer;
     box-shadow: 0 4px #c6c6c6;
 }
 
 .order-button:hover {
-    background-color: rgba(152, 82, 238, 0.7);
+    background: linear-gradient(90deg,rgb(242, 242, 244) 0%, rgba(240, 240, 250, 1) 19%, rgba(52, 52, 59, 1) 100%, rgba(148, 154, 156, 1) 57%);
 }
 
 .order-button:active {
     background-color: rgb(169, 168, 168);
     box-shadow: 0 3px #c6c6c6;
-    transform: translateY(4px);
+    transform: translate3d(5px);
 }
 
 .empty-basket-button {
     padding: 10px 10px 10px 10px;
     margin: 10px 10px 10px 10px;
     border-width: 0px;
-    border-radius: 15px;
+    border-radius: 8px;
     background-color: rgb(234, 227, 227);
     cursor: pointer;
     box-shadow: 0 4px #c6c6c6;
 }
 
 .empty-basket-button:hover {
-    background-color:rgba(152, 82, 238, 0.7);
+    background: linear-gradient(90deg,rgb(242, 242, 244) 0%, rgba(240, 240, 250, 1) 19%, rgba(52, 52, 59, 1) 100%, rgba(148, 154, 156, 1) 57%);
 }
 
 .empty-basket-button:active {
-    background-color:rgba(152, 82, 238, 0.7);
+    background-color:rgba(244, 240, 250, 0.7);
     box-shadow: 0 3px #c6c6c6;
     transform: translateY(4px);
 }
 
 
 .icon-link {
-    color:rgba(152, 82, 238, 0.7);
+    color: rgba(244, 240, 250, 0.7);
 }
 
 .icon-link:hover {
-    color:rgba(152, 82, 238, 0.7);
+    color: rgba(244, 240, 250, 0.7);
 }
 
 .close-icon {
@@ -371,7 +374,6 @@
     justify-content: center;
     align-items: center;
     color: black;
-    background-color: rgb(203, 195, 195);
+    background: linear-gradient(90deg,rgb(242, 242, 244) 0%, rgba(240, 240, 250, 1) 19%, rgba(52, 52, 59, 1) 100%, rgba(148, 154, 156, 1) 57%);
 }
-
 
