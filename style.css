@@ -238,8 +238,7 @@
 }
 
 .basket-full {
-    max-height: 500px;
-    overflow: scroll;    
+    max-height: 500px;   
     display: flex;
     flex-direction: column;
     direction: rtl;
@@ -251,6 +250,7 @@
     right: 22px;
     background-color: rgba(80, 70, 219, 0.7);
     border-radius: 8px;
+    visibility: hidden;
     cursor: pointer;
     
 }
@@ -427,114 +427,5 @@
     cursor: pointer;
 }
 
-
-
-@media (max-width: 850px) {
-    .header-image {
-        height: 220px;
-    }
-
-    .basket {
-       position: fixed;
-       background-color: aliceblue;
-       inset: 0 0 0 0;
-       width: 100%;        
-    }
-
-    .hide-basket {
-        display: none;
-    }
-
-    .basket-mobile {
-        visibility: visible;
-    }
-
-
-    .basket-sum {
-        margin: 10px 20% 0 20%;
-        display: flex;
-        flex-direction: column;
-        align-items: normal;
-        gap: 5px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        max-width: 50%;
-    }
-
-    .subtotal-text {
-        padding-right: 15px;
-    }
-
-    .basket-dishes{
-        margin: 0 0 0 0px;
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .basket-amount-calculator{
-        margin-bottom: 10px; 
-    }
-
-    .seperation {
-        margin: 0px 10px 0 10px;
-    }
-
-    .basket-content{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .basket-full {
-        max-height: 400px;
-        overflow: scroll;    
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        margin-top: 10px;
-        
-        width: 100%;
-    }
-
-    .order-button {
-        padding: 10px 40px 10px 40px;
-        font-size: 25px;
-    }
-    
-    .close-icon {
-        visibility:visible;
-    }
-
-    .sum-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;        
-    }
-
-    .basket-sticky{
-        width: 70%;    
-    }
-}
-
-@media (max-width: 600px){
-    .basket-sticky{
-        width: 100%;    
-    }
-}
-
-@media (max-width: 450px) {
-
-    .basket-sum {
-        margin: 10px 3% 10px 3%;  
-        max-width: 100%;      
-    }
-}
-
-@media (max-width: 400px) {
-    .basket-sum {
-        margin: 10px 0 10px 0;       
-        text-align: center;
-    }
-}
 
 

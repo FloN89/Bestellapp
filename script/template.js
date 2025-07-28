@@ -85,7 +85,7 @@ function showOrderClear() {
 
 function showBasketMobile() {
     return      `   <div class="basket-mobile">
-                         <img onclick="hideBasket()" src="">
+                         <img onclick="hideBasket()" src="img/logos/basket.png">
                          <span id="numberMobileBasket" class="number-mobile-basket">0</span>
                     </div>
                  `
