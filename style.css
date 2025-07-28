@@ -1,56 +1,18 @@
-.overlay {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;   
-}
-
 .overlay-order {
     position: fixed;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    height: 300px;
+    width:100%;
+    background-color: rgba(168, 163, 239, 0.5);
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: center;   
+    justify-content: center; 
+    font-size: 30px;
+    
+   
 }
-
-.overlay-content-order {
-    background-image: linear-gradient(90deg, rgb(230, 219, 208) 0%, rgb(219, 195, 172) 50%, rgb(230, 219, 208) 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 10px;
-    margin:  5% 5% 5% 5%;
-}
-
-.order-text {
-    font-size: 35px;
-    margin:  20px 20px 20px 20px;
-}
-
 .d-none {
     display: none;
-}
-
-.overlay-content-middle {
-    background-image: linear-gradient(90deg, rgb(230, 219, 208) 0%, rgb(219, 195, 172) 50%, rgb(230, 219, 208) 100%);
-    max-height: 600px;
-    overflow: scroll;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    padding: 10px 10px 0 10px;
-    border-radius: 10px;      
 }
 
 .header-content {
