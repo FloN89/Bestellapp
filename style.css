@@ -16,17 +16,18 @@
 }
 
 .header-content {
-    height: 80px;
+    height: 90px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
+    padding: 30px;
 }
 
 .header-Logo {
     height: 60px;
     width: auto;
-    margin-left: 5%;
+   
+    
 }
 
 .content-section {
@@ -116,16 +117,15 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 1px solid rgb(196, 193, 193);  
+    border: 2px solid black;  
     margin: 15px 0 0 0;
     position: relative;
     transition: 0.3s;
-    box-shadow: 5px 5px 0px rgba(196, 193, 193, 0.5);
+    border-radius: 8px;
 }
 
 .dish-choice:hover {
-    background-color:rgba(152, 82, 238, 0.7);
-    box-shadow: 10px 10px 0px rgba(196, 193, 193, 0.5);
+    background-color:rgba(152, 82, 238, 0.7); 
 }
 
 .plus{
@@ -164,7 +164,8 @@
     width: 450px;
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;  
+    border-radius: 8px;  
     box-shadow: 0px 0px 10px gray;
 }
 
@@ -292,21 +293,6 @@
     font-size: 17px;
 }
 
-.checkbox-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:space-around;
-}
-
-.checkbox-delivery {    
-    margin: 11px 0%  0% 10px
-}
-
-.checkbox-delivery-label {
-    font-size: 17px;
-}
-
 .basket-mobile-headline {
     font-size: 25px;
     font-weight: bold;
@@ -359,15 +345,6 @@
     transform: translateY(4px);
 }
 
-.footer-content {
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: black;
-    padding: 0 5% 0 5%;
-}
 
 .icon-link {
     color:rgba(152, 82, 238, 0.7);
@@ -388,6 +365,12 @@
     visibility: hidden;
     cursor: pointer;
 }
-
+.footer-content {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
 
 

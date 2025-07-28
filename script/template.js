@@ -46,7 +46,7 @@ function showBasket(indexBasket) {
 function showEmptyBasket(){
 return          `   <div  class="basket-content-empty">
                         <img class="basket-icon" src="img/buttons/delete.png">
-                        <span>Warenkorb ist noch leer. <br> Bestelle Deine Lieblingsgerichtete</span>
+                        <span>Es liegt noch keine Bestellung vor.</span>
                     </div>
                 ` 
 }

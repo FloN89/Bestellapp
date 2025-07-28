@@ -16,22 +16,17 @@
 
 </head>
 <body onload="init()">
-    
-
-
     <div onclick="toggleOverlayOrder()" id="overlayOrder" class="overlay-order d-none">
         <div onclick="noBubbling(event)" class="overlay-content-order ">
             <span class="order-text">Vielen Dank für Deine Bestellung</span>
         </div>
-    </div>
-    
+    </div>    
     <section class="header">
         <div class="header-content widescreen">
             <img class="header-Logo" src="img/logos/favicon.png">
             <h1>Zum Gamsbock</h1>
         </div>
     </section>    
-
     <section class="content-section widescreen">
         <div class="content-top">
             <div class="header-images">
@@ -46,30 +41,23 @@
                 <a class="internal-link" href="#desserts">Desserts</a>  
                  <a class="internal-link" href="#drinks">Getränke</a>              
             </div>
-
             <div class="content-dishes">
                 <img id="mains" class="content-images" src="img/dishes/roast-crust-2278382_1280.jpg" >
                 <span class="dishes-headline">Hauptgerichte</span>
                 <div id="dishMainFood" ></div>             
             </div>
-
             <div class="content-dishes">
                 <img id="desserts" class="content-images" src="img/dishes/apple-pie-5479993_1280.jpg">
                 <span class="dishes-headline">Desserts</span>
                 <div id="dishDessertFood"></div>                
             </div>
-
             <div class="content-dishes">
                 <img id="drinks" class="content-images" src="img/dishes/green-924165_1280.jpg">
                 <span class="dishes-headline">Getränke</span>
                 <div id="dishDrinks"></div>                
             </div>
-
-
             <div id="basketMobile"></div>
-        </div>
-
-        
+        </div>     
         <div id="stickyBasket" class="basket hide-basket">
             <div class="basket-sticky">
                 <div class="basket-header">
@@ -79,18 +67,12 @@
                 <div id="basketContentEmpty"></div>
                 <div class="basket-full" id="basketFull"></div>
                 <div class="sum-content" id="sumMobile"></div> 
-                <div id="orderSection" class="order-section"></div> 
-                
-                
+                <div id="orderSection" class="order-section"></div>           
             </div>
         </div>        
     </section >    
-
-    <section class="footer">
-        <div class="footer-content">
+        <footer class="footer-content">
             <span>&copy Florian Narr 2025</span>
-        </div>
-    </section> 
-
+        </footer>
 </body>
 </html>
