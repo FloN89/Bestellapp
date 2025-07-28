@@ -45,29 +45,29 @@ let desserts = [
     },
     
 ]
-// let drinks = [
-//     {
-//         "name" : "Sprudelwasser 0,5L",
-//         "description" : "",
-//         "price" : 1.99
-//     },
-//     {
-//         "name" : "Helles 0,5L",
-//         "description" : "",
-//         "price" : 3.99
-//     },
-//     {
-//         "name" : "Weißbier 0,5L",
-//         "description" : "",
-//         "price" : 3.99
-//     },
-//     {
-//         "name" : "Almdudler 0,5L",
-//         "description" : "",
-//         "price" : 2.99
-//     },
+let drinks = [
+    {
+        "name" : "Sprudelwasser 0,5L",
+        "description" : "",
+        "price" : 1.99
+    },
+    {
+        "name" : "Helles 0,5L",
+        "description" : "",
+        "price" : 3.99
+    },
+    {
+        "name" : "Weißbier 0,5L",
+        "description" : "",
+        "price" : 3.99
+    },
+    {
+        "name" : "Almdudler 0,5L",
+        "description" : "",
+        "price" : 2.99
+    },
     
-// ];
+]
 
 
 

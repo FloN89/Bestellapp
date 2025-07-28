@@ -19,15 +19,15 @@ function showDesserts(indexDessert) {
                 `
 }
 
-// function showDrinks(indexDrinks) {
-//     return       `  <div class="dish-choice">
-//                         <img onclick="addDrinks(${indexDrinks})" class="plus" src="img/buttons/add-151736_1280.png">
-//                         <span id="dishesDrinkName" class="dishes-name">${drinks[indexDrinks].name}</span>
-//                         <span id="dishesIncridients" class="dishes-incridients">${desserts[indexDrinks].description}</span>
-//                         <span id="dishesPrice" class="dishes-price">${drinks[indexDrinks].price} €</span>
-//                     </div>   
-//                 `
-// }
+function showDrinks(indexDrinks) {
+    return       `  <div class="dish-choice">
+                        <img onclick="addDrinks(${indexDrinks})" class="plus" src="img/buttons/add-151736_1280.png">
+                        <span id="dishesDrinkName" class="dishes-name">${drinks[indexDrinks].name}</span>
+                        <span id="dishesIncridients" class="dishes-incridients">${desserts[indexDrinks].description}</span>
+                        <span id="dishesPrice" class="dishes-price">${drinks[indexDrinks].price} €</span>
+                    </div>   
+                `
+}
 
 function showBasket(indexBasket) {
     return      `   <div class="basket-content">

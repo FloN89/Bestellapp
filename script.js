@@ -4,7 +4,7 @@ function init() {
     renderMain();
     renderDessert();
     renderBasket();   
-    // renderDrinks();
+    renderDrinks();
     renderBasketIconMobile();    
     numberMobileBasket();      
 }
@@ -25,13 +25,13 @@ function renderDessert() {
     }
 }  
 
-// function renderDrinks() { 
-//     let drinksContent = document.getElementById('dishDrinks');
-//     drinksContent.innerHTML = '';
-//     for (let indexDrinks = 0; indexDrinks < desserts.length; indexDrinks++) {
-//         drinksContent.innerHTML += showDrinks (indexDrinks);                
-//     }
-// }  
+function renderDrinks() { 
+    let drinksContent = document.getElementById('dishDrinks');
+    drinksContent.innerHTML = '';
+    for (let indexDrinks = 0; indexDrinks < desserts.length; indexDrinks++) {
+        drinksContent.innerHTML += showDrinks (indexDrinks);                
+    }
+}  
 
 
 function renderBasket() {
@@ -103,21 +103,21 @@ function addDessert(indexDessert) {
     numberMobileBasket();
 }  
 
-// function addDrinks(indexDrinks) {
-//     let existingListIndex = bascetCard.findIndex(dish => dish.name === drinks[indexDrinks].name);
-//     if (existingListIndex !== -1) {
-//         bascetCard[existingListIndex].amount++;
-//     }  
-//     else {
-//         bascetCard.push({
-//             name: drinks[indexDrinks].name,
-//             price: drinks[indexDrinks].price,
-//             amount: 1,  
-//         });
-//     }
-//     renderBasket(); 
-//     numberMobileBasket();
-// }  
+function addDrinks(indexDrinks) {
+    let existingListIndex = bascetCard.findIndex(dish => dish.name === drinks[indexDrinks].name);
+    if (existingListIndex !== -1) {
+        bascetCard[existingListIndex].amount++;
+    }  
+    else {
+        bascetCard.push({
+            name: drinks[indexDrinks].name,
+            price: drinks[indexDrinks].price,
+            amount: 1,  
+        });
+    }
+    renderBasket(); 
+    numberMobileBasket();
+}  
 function plusDish(indexBasket) {
     bascetCard[indexBasket].amount ++; 
     renderBasket();
