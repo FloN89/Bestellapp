@@ -1,3 +1,9 @@
+.widescreen {
+    max-width: 1920px;
+    margin: auto;
+}
+
+
 .overlay-order {
     position: fixed;
     height: 300px;
