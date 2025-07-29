@@ -95,11 +95,33 @@
     .basket-sticky{
         width: 100%;    
     }
+    .round-logo {
+    position: absolute;
+    left: 40%;
+    bottom: -30px;
+    width: 130px;
+    height: 130px;
+    border-radius: 30%;
+    border: 2px solid black;
+}
     
 }
 
 @media (max-width: 430px) {
-
+    .internal-link {
+    font-size: 18px;
+    padding-right: 10px; 
+    font-weight: 700;   
+}
+.round-logo {
+    position: absolute;
+    left: 30%;
+    bottom: -30px;
+    width: 130px;
+    height: 130px;
+    border-radius: 30%;
+    border: 2px solid black;
+}
     
     
 }

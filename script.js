@@ -21,8 +21,7 @@ function renderFood() {
     let drinksContent = document.getElementById('dishDrinks');
     drinksContent.innerHTML = '';
     for (let indexDrinks = 0; indexDrinks < drinks.length; indexDrinks++) {
-        drinksContent.innerHTML += showDrinks (indexDrinks);                
-    
+        drinksContent.innerHTML += showDrinks (indexDrinks);                    
 }  
 }  
 
@@ -66,7 +65,7 @@ function formatPriceTag(inputPrice) {
 
 
 function addMainDish(indexMain) {
-    let existingListIndex = bascetCard.findIndex(dish => dish.name === mainDish[indexMain].name);
+    let existingListIndex = bascetCard.findIndex(dish => dish.name === mainDish[indexMain, indexDessert, indexDrinks].name);
     if (existingListIndex !== -1) {
         bascetCard[existingListIndex].amount++;
     }  
