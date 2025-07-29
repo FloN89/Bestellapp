@@ -1,38 +1,30 @@
 let deliveryCost = 7; 
 
 function init() {
-    renderMain();
-    renderDessert();
+    renderFood();
     renderBasket();   
-    renderDrinks();
     renderBasketIconMobile();    
     numberMobileBasket();      
 }
 
-function renderMain() { 
+function renderFood() { 
     let mainContent = document.getElementById('dishMainFood');
     mainContent.innerHTML = '';
     for (let indexMain = 0; indexMain < mainDish.length; indexMain++) {
         mainContent.innerHTML += showMains (indexMain);                
     }
-}  
-
-function renderDessert() { 
     let dessertContent = document.getElementById('dishDessertFood');
     dessertContent.innerHTML = '';
     for (let indexDessert = 0; indexDessert < desserts.length; indexDessert++) {
         dessertContent.innerHTML += showDesserts(indexDessert);                
     }
-}  
-
-function renderDrinks() { 
     let drinksContent = document.getElementById('dishDrinks');
     drinksContent.innerHTML = '';
-    for (let indexDrinks = 0; indexDrinks < desserts.length; indexDrinks++) {
+    for (let indexDrinks = 0; indexDrinks < drinks.length; indexDrinks++) {
         drinksContent.innerHTML += showDrinks (indexDrinks);                
-    }
+    
 }  
-
+}  
 
 function renderBasket() {
     let emptyBasket = document.getElementById('basketContentEmpty');
@@ -70,6 +62,8 @@ function formatPriceTag(inputPrice) {
     let replace = toFixed.replace(".",",");
     return replace;
 }
+
+
 
 function addMainDish(indexMain) {
     let existingListIndex = bascetCard.findIndex(dish => dish.name === mainDish[indexMain].name);
