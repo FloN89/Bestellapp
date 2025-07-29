@@ -7,7 +7,8 @@
        position: fixed;
        background-color: rgb(232, 236, 239);
        inset: 0 0 0 0;
-       width: 100%;        
+       width: 100%;     
+       overflow: scroll;   
     }
 
     .hide-basket {
@@ -61,7 +62,6 @@
     }
 
     .basket-full {
- 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -94,21 +94,45 @@
     .basket-sticky{
         width: 100%;    
     }
+    .basket {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    overflow: scroll;
+}
 
 }
 
-@media (max-width: 450px) {
+@media (max-width: 420px) {
 
     .basket-sum {
         margin: 10px 3% 10px 3%;  
         max-width: 100%;      
     }
+    .basket {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    overflow: scroll;
+}
 }
 
 @media (max-width: 400px) {
+    .basket {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    border-radius: 8px;  
+    box-shadow: 0px 0px 10px gray;
+    overflow: scroll;
+}
+
     .basket-sum {
         margin: 5px 2% 5px 2%;       
-        max-width: 100%;
+        
     }
     
 }
