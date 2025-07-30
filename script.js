@@ -7,23 +7,16 @@ function init() {
     numberMobileBasket();      
 }
 
-function renderFood() { 
-    let mainContent = document.getElementById('dishMainFood');
-    mainContent.innerHTML = '';
-    for (let indexMain = 0; indexMain < mainDish.length; indexMain++) {
-        mainContent.innerHTML += showMains (indexMain);                
-    }
-    let dessertContent = document.getElementById('dishDessertFood');
-    dessertContent.innerHTML = '';
-    for (let indexDessert = 0; indexDessert < desserts.length; indexDessert++) {
-        dessertContent.innerHTML += showDesserts(indexDessert);                
-    }
-    let drinksContent = document.getElementById('dishDrinks');
-    drinksContent.innerHTML = '';
-    for (let indexDrinks = 0; indexDrinks < drinks.length; indexDrinks++) {
-        drinksContent.innerHTML += showDrinks (indexDrinks);                    
-}  
-}  
+function renderFood() {
+    renderCategory('dishMainFood', mainDish, showMains);
+    renderCategory('dishDessertFood', desserts, showDesserts);
+    renderCategory('dishDrinks', drinks, showDrinks);
+}
+
+function renderCategory(containerId, items, renderFunction) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = items.map((_, i) => renderFunction(i)).join('');
+}
 
 function renderBasket() {
     let emptyBasket = document.getElementById('basketContentEmpty');
@@ -64,53 +57,23 @@ function formatPriceTag(inputPrice) {
 
 
 
-function addMainDish(indexMain) {
-    let existingListIndex = bascetCard.findIndex(dish => dish.name === mainDish[indexMain, indexDessert, indexDrinks].name);
+function addItemToBasket(index, dishArray) {
+    const item = dishArray[index];
+    let existingListIndex = bascetCard.findIndex(dish => dish.name === item.name);
+
     if (existingListIndex !== -1) {
         bascetCard[existingListIndex].amount++;
-    }  
-    else {
+    } else {
         bascetCard.push({
-            name: mainDish[indexMain].name,
-            price: mainDish[indexMain].price,
-            amount: 1,  
+            name: item.name,
+            price: item.price,
+            amount: 1,
         });
     }
-    renderBasket(); 
+
+    renderBasket();
     numberMobileBasket();
 }
-
-function addDessert(indexDessert) {
-    let existingListIndex = bascetCard.findIndex(dish => dish.name === desserts[indexDessert].name);
-    if (existingListIndex !== -1) {
-        bascetCard[existingListIndex].amount++;
-    }  
-    else {
-        bascetCard.push({
-            name: desserts[indexDessert].name,
-            price: desserts[indexDessert].price,
-            amount: 1,  
-        });
-    }
-    renderBasket(); 
-    numberMobileBasket();
-}  
-
-function addDrinks(indexDrinks) {
-    let existingListIndex = bascetCard.findIndex(dish => dish.name === drinks[indexDrinks].name);
-    if (existingListIndex !== -1) {
-        bascetCard[existingListIndex].amount++;
-    }  
-    else {
-        bascetCard.push({
-            name: drinks[indexDrinks].name,
-            price: drinks[indexDrinks].price,
-            amount: 1,  
-        });
-    }
-    renderBasket(); 
-    numberMobileBasket();
-}  
 function plusDish(indexBasket) {
     bascetCard[indexBasket].amount ++; 
     renderBasket();

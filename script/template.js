@@ -1,32 +1,32 @@
 function showMains(indexMain) {
-    return       `  <div class="dish-choice">
-                        <img onclick="addMainDish(${indexMain})" class="plus" src="img/buttons/add-151736_1280.png">
-                        <span id="dishesMainName${indexMain}" class="dishes-name">${mainDish[indexMain].name}</span>
-                        <span id="dishesIncridients" class="dishes-incridients">${mainDish[indexMain].description}</span>
-                        <span id="dishesPrice${indexMain}" class="dishes-price">${formatPriceTag(mainDish[indexMain].price)}€</span>
-                    </div>   
-                `
+    return `  
+        <div class="dish-choice">
+            <img onclick="addItemToBasket(${indexMain}, mainDish)" class="plus" src="img/buttons/add-151736_1280.png">
+            <span id="dishesMainName${indexMain}" class="dishes-name">${mainDish[indexMain].name}</span>
+            <span id="dishesIncridients" class="dishes-incridients">${mainDish[indexMain].description}</span>
+            <span id="dishesPrice${indexMain}" class="dishes-price">${formatPriceTag(mainDish[indexMain].price)}€</span>
+        </div>`;
 }
+
 
 
 function showDesserts(indexDessert) {
-    return       `  <div class="dish-choice">
-                        <img onclick="addDessert(${indexDessert})" class="plus" src="img/buttons/add-151736_1280.png">
-                        <span id="dishesDessertName" class="dishes-name">${desserts[indexDessert].name}</span>
-                        <span id="dishesIncridients" class="dishes-incridients">${desserts[indexDessert].description}</span>
-                        <span id="dishesPrice" class="dishes-price">${formatPriceTag(desserts[indexDessert].price)}€</span>
-                    </div>   
-                `
+    return `  
+        <div class="dish-choice">
+            <img onclick="addItemToBasket(${indexDessert}, desserts)" class="plus" src="img/buttons/add-151736_1280.png">
+            <span id="dishesDessertName" class="dishes-name">${desserts[indexDessert].name}</span>
+            <span id="dishesIncridients" class="dishes-incridients">${desserts[indexDessert].description}</span>
+            <span id="dishesPrice" class="dishes-price">${formatPriceTag(desserts[indexDessert].price)}€</span>
+        </div>`;
 }
-
 function showDrinks(indexDrinks) {
-    return       `  <div class="dish-choice">
-                        <img onclick="addDrinks(${indexDrinks})" class="plus" src="img/buttons/add-151736_1280.png">
-                        <span id="dishesDrinkName" class="dishes-name">${drinks[indexDrinks].name}</span>
-                        <span id="dishesIncridients" class="dishes-incridients">${desserts[indexDrinks].description}</span>
-                        <span id="dishesPrice" class="dishes-price">${drinks[indexDrinks].price} €</span>
-                    </div>   
-                `
+    return `  
+        <div class="dish-choice">
+            <img onclick="addItemToBasket(${indexDrinks}, drinks)" class="plus" src="img/buttons/add-151736_1280.png">
+            <span id="dishesDrinkName" class="dishes-name">${drinks[indexDrinks].name}</span>
+            <span id="dishesIncridients" class="dishes-incridients">${drinks[indexDrinks].description}</span>
+            <span id="dishesPrice" class="dishes-price">${formatPriceTag(drinks[indexDrinks].price)}€</span>
+        </div>`;
 }
 
 function showBasket(indexBasket) {
